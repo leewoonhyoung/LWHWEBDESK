@@ -1,4 +1,4 @@
-package LWH.LWHWEBDESK.web.domain.posts;
+package LWH.LWHWEBDESK.domain.posts;
 
 import lombok.Builder;
 import lombok.Getter;

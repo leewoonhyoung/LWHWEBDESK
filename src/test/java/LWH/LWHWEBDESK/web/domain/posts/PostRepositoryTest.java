@@ -1,5 +1,7 @@
 package LWH.LWHWEBDESK.web.domain.posts;
 
+import LWH.LWHWEBDESK.domain.posts.PostsRepository;
+import LWH.LWHWEBDESK.domain.posts.Posts;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
@@ -10,14 +12,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class PostRepositoryTest {
 
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postRepository;
 
     @After // @After는 테스트간 데이터 침범을  막기 위해서 사용한다.
     public void cleanup(){
