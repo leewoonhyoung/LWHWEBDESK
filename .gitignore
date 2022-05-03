@@ -19,6 +19,8 @@ bin/
 
 
 application-real-oauth.properties
+appplication-google.properties
+application-oauth.properties
 
 ### IntelliJ IDEA ###
 .idea

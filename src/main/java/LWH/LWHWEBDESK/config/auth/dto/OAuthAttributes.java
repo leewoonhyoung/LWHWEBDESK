@@ -1,5 +1,7 @@
 package LWH.LWHWEBDESK.config.auth.dto;
 
+import LWH.LWHWEBDESK.domain.user.Role;
+import LWH.LWHWEBDESK.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -27,9 +29,23 @@ public class OAuthAttributes {
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes){
         return ofGoogle(userNameAttributeName, attributes);
     }
+
     private static OAuthAttributes ofGoogle(String userNameAttributeName, Map<String, Object> attributes){
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
-                .
+                .email((String) attributes.get("email"))
+                .picture((String) attributes.get("picture"))
+                .attributes(attributes)
+                .nameAttributeKey(userNameAttributeName)
+                .build();
+    }
+
+    public User toEntity() {
+        return User.builder()
+                .name(name)
+                .email(email)
+                .picture(picture)
+                .role(Role.GUEST)
+                .build();
     }
 }
