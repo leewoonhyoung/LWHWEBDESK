@@ -13,7 +13,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 import javax.servlet.http.HttpSession;
 
 
-//TODO 왜 hanldlermethodArgumentResolver를 사용했냐!
+//TODO 왜 hanldlermethodArgumentResolver를 사용했냐! book 확인
 @RequiredArgsConstructor
 @Component
 public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver {
