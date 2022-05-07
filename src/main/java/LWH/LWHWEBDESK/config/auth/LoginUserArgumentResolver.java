@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 
 
 //TODO 왜 hanldlermethodArgumentResolver를 사용했냐! book 확인
+//이유  : 구현체가 지정한 값으로 해당 메소드의 파라미터로 넘길수 있다.
 @RequiredArgsConstructor
 @Component
 public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver {
