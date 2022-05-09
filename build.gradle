@@ -37,8 +37,8 @@ dependencies {
 	implementation('com.h2database:h2')
 	implementation('org.springframework.boot:spring-boot-starter-mustache')
 	implementation 'junit:junit:4.13.1'
-
 	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+	implementation('org.springframwork.session:spring-session-jdbc')
 
 
 }
