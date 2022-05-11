@@ -25,7 +25,7 @@ public class OAuthAttributes {
         this.email = email;
         this.picture = picture;
     }
-
+    // oauth2User에서 반환하는 사용자 정보는 Map이다. 따라서 하나하나를 변환해서 반환해야 한다.
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes){
         if("naver".equals(registrationId)){
             return ofNaver("id", attributes);
